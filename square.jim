@@ -1,0 +1,34 @@
+//open("C:\\Users\\Ilyalocal\\Desktop\\Test.jpg");
+selectWindow("Test.jpg");
+width = getWidth();
+height = getHeight();
+//var pixel = getPixel(123);//показывает высоту картинки , не смотря на разные значения x y
+print(height);
+print(width);
+//log(pixel);//выводит высоту так же как и var height = getHeight();
+
+//
+var myY = 0;
+var myX = width * 0.3;
+var myColor = getPixel (140,0);
+var eps = 100;
+for (x = myX, y = 0; y < height; y++) {
+	var color = toString(getPixel(x, y));		
+	if (abs(myColor - color) > eps) {
+		myY = y;
+		break;
+	}
+}
+print (myY);
+//
+
+//var info = getImageInfo();
+//getPixel(140,0);//показывает высоту картинки , не смотря на разные значения x y
+//Dialog.create("Test");
+//Dialog.addString("Color","");
+//Dialog.show();
+//log(info);
+selectWindow("Test.jpg");
+
+
+
